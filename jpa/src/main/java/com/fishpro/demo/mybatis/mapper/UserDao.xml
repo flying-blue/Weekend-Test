@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fishpro.demo.mybatis.dao.UserDao">
+    <!-- 插入数据-->
+    <insert id="insert" parameterType="com.fishpro.demo.mybatis.entity.User">
+        insert  into t_user_x(
+        id,name,sex,create_time)
+        values(
+        #{user.id},#{user.name},#{user.sex},#{user.createTime}
+        )
+    </insert>
+
+</mapper>

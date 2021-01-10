@@ -1,0 +1,23 @@
+server:
+  port: 8006
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.132:3306/demo_test?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 0
+      max-file-size: 10485760
+      max-request-size: 1048576000
+
+mybatis:
+  type-aliases-package: com.fishpro.demo.mybatis.entity
+  mapper-locations: classpath:com/fishpro/demo/mybatis/mapper/*.xml
